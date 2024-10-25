@@ -1,21 +1,18 @@
 ﻿using HarmonyLib;
-using UnityEngine;
 using UnityEngine.Audio;
-using VTOLAPI;
 
-#nullable disable
 namespace GBreathing
 {
     [HarmonyPatch(typeof(Actor), "Start")]
     internal class PlayerSpawnPatch
     {
-        public static void Postfix(Actor __instance)
+        public static void Postfix(Actor instance)
         {
-            if (__instance.GetComponent<PlayerEntityIdentifier>() == null ||
-                __instance.gameObject.GetComponentInChildren<VehicleMaster>(true).playerVehicle == null)
+            if (instance.GetComponent<PlayerEntityIdentifier>() == null ||
+                instance.gameObject.GetComponentInChildren<VehicleMaster>(true).playerVehicle == null)
                 return;
 
-            FlightInfo flightInfo = __instance.GetComponent<FlightInfo>();
+            FlightInfo flightInfo = instance.GetComponent<FlightInfo>();
             if (flightInfo != null)
             {
                 Main.SetFlightInfo(flightInfo);
