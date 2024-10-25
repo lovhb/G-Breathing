@@ -6,13 +6,13 @@ namespace GBreathing
     [HarmonyPatch(typeof(Actor), "Start")]
     internal class PlayerSpawnPatch
     {
-        public static void Postfix(Actor instance)
+        public static void Postfix(Actor __instance)
         {
-            if (instance.GetComponent<PlayerEntityIdentifier>() == null ||
-                instance.gameObject.GetComponentInChildren<VehicleMaster>(true).playerVehicle == null)
+            if (__instance.GetComponent<PlayerEntityIdentifier>() == null ||
+                __instance.gameObject.GetComponentInChildren<VehicleMaster>(true).playerVehicle == null)
                 return;
 
-            FlightInfo flightInfo = instance.GetComponent<FlightInfo>();
+            FlightInfo flightInfo = __instance.GetComponent<FlightInfo>();
             if (flightInfo != null)
             {
                 Main.SetFlightInfo(flightInfo);

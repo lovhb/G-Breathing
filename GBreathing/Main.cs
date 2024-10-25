@@ -107,7 +107,7 @@ public class Main : VtolMod
         var volume = CalculateVolume(_flightInfo.playerGs);
         var flybyCamera = FlybyCameraMFDPage.instance;
 
-        if (_flightInfo.playerGs > 6)
+        if (_flightInfo.playerGs > 5)
             PlayBreathing();
         else
             StopBreathing();
