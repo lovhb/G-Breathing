@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "https://gitlab.com/vtolvr-mods/ModLoader/-/raw/release/schema.json",
+  "Title": "G-Breathing",
+  "Description": "Adds G-Straining breathing sounds (Hicks) to the game.",
+  "PreviewImageUrl": "https://i.imgur.com/Di0QRzW.png",
+  "MetaData": {
+    "DllName": "GBreathing.dll",
+    "AllowLoadOnStart": true,
+    "ShowOnMainList": true,
+    "DllHash": ""
+  }
+}

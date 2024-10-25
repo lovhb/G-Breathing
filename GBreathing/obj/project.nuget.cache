@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iCF3Y2i+xAI=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\VTOL VR Mods\\RiderProjects\\GBreathing\\GBreathing\\GBreathing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\loveb\\.nuget\\packages\\bepinex.assemblypublicizer.msbuild\\0.4.2\\bepinex.assemblypublicizer.msbuild.0.4.2.nupkg.sha512"
+  ],
+  "logs": []
+}
