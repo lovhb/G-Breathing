@@ -21,3 +21,4 @@ D:\Projects\VTOL VR Mods\RiderProjects\GBreathing\GBreathing\obj\Debug\net472\GB
 D:\Projects\VTOL VR Mods\RiderProjects\GBreathing\GBreathing\obj\Debug\net472\GBreathing.csproj.Up2Date
 D:\Projects\VTOL VR Mods\RiderProjects\GBreathing\GBreathing\obj\Debug\net472\GBreathing.dll
 D:\Projects\VTOL VR Mods\RiderProjects\GBreathing\GBreathing\obj\Debug\net472\GBreathing.pdb
+D:\Projects\VTOL VR Mods\RiderProjects\GBreathing\GBreathing\obj\Debug\net472\GBreathing.sourcelink.json
