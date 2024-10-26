@@ -21,7 +21,6 @@ public class Main : VtolMod
     public AudioClip endingClip;
     private static FlightInfo _flightInfo;
     private const float VolumeReductionFactor = 0.5f;
-    public AudioMixerGroup interiorMixerGroup;
 
     private void Awake()
     {
@@ -79,7 +78,7 @@ public class Main : VtolMod
         }
     }
 
-    private IEnumerator LoadAudio(string path, Action<AudioClip> setClip, AudioSource source)
+    private static IEnumerator LoadAudio(string path, Action<AudioClip> setClip, AudioSource source)
     {
         Log($"Starting audio load coroutine for path: {path}");
         using var www = UnityWebRequestMultimedia.GetAudioClip("file://" + path, AudioType.OGGVORBIS);
@@ -141,7 +140,7 @@ public class Main : VtolMod
         }
     }
 
-    private void StopBreathing()
+    private static void StopBreathing()
     {
         if (!_audioSource.isPlaying) return;
 
@@ -150,7 +149,7 @@ public class Main : VtolMod
         PlayEndingSound();
     }
 
-    private void PlayEndingSound()
+    private static void PlayEndingSound()
     {
         if (_endingAudioSource.isPlaying) return;
         
