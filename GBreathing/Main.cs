@@ -38,9 +38,9 @@ public class Main : VtolMod
         _endingAudioSource = ConfigureAudioSource(gameObject.AddComponent<AudioSource>(), false);
         Log("AudioSource components added");
 
-        // Load the audio clips
-        StartCoroutine(LoadAudio(Path.Combine(_modFolder, "GBreath.ogg"), clip => breathingClip = clip, _audioSource));
-        StartCoroutine(LoadAudio(Path.Combine(_modFolder, "GBreath_End.ogg"), clip => endingClip = clip, _endingAudioSource));
+        // Load the audio clips from the "Sounds" subfolder
+        StartCoroutine(LoadAudio(Path.Combine(_modFolder, "Sounds", "GBreath.ogg"), clip => breathingClip = clip, _audioSource));
+        StartCoroutine(LoadAudio(Path.Combine(_modFolder, "Sounds", "GBreath_End.ogg"), clip => endingClip = clip, _endingAudioSource));
     }
     
     private static AudioSource ConfigureAudioSource(AudioSource source, bool loop)
@@ -136,6 +136,7 @@ public class Main : VtolMod
         if (!_audioSource.isPlaying)
         {
             Log("Playing breathing sound");
+            _endingAudioSource.Stop();
             _audioSource.Play();
         }
     }

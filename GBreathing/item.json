@@ -8,5 +8,8 @@
     "AllowLoadOnStart": true,
     "ShowOnMainList": true,
     "DllHash": ""
-  }
+  },
+  "DependenciesIds": [
+    3265689427
+  ]
 }
